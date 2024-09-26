@@ -1,22 +1,16 @@
-// Implement the constructor
+public class Node<T extends Comparable<T>> implements Comparable<Node<T>> {
+    T value; //Value stored
+    Node<T> left, right; //L and R references
 
+    //Constructor for value
+    public Node(T value) {
+        this.value = value;
+        left = right = null; //Initialize as null
+    }
 
-// Implement the setElement method
-
-
-// Implement the setLeft method
-
-
-// Implement the setRight method
-
-
-// Implement the getLeft method
-
-
-// Implement the getRight method
-
-
-// Implement the getElement method
-
-
-// Implement the isLeaf method
+    //Comparing two nodes on value
+    @Override
+    public int compareTo(Node<T> other) {
+        return this.value.compareTo(other.value); //comparing values
+    }
+}
